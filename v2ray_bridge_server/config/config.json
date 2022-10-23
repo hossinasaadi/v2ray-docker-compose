@@ -160,6 +160,21 @@
           "ip": [
             "geoip:private"
           ]
+        },
+        {
+          "type": "field",
+          "domain": [
+            "regexp:.*\\.ir$"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "ip": [
+            "geoip:private",
+            "geoip:ir"
+          ],
+          "outboundTag": "direct"
         }
       ]
     }
